@@ -10,7 +10,14 @@
 | `hostname` | "Host" (sunucu) ve "name" (isim) birleşimi                    | Sistemin adını görüntüler.                                    | `hostname`                                  |
 | `who`      | "Who" (kim) kelimesi, kimlerin sisteme giriş yaptığını sorgular | Sistemde oturum açmış kullanıcıları gösterir.                 | `who`                                       |
 | `uptime`   | "Up" (yukarıda) ve "time" (zaman) birleşimi                  | Sistemin çalışma süresini ve yükünü görüntüler.              | `uptime`                                    |
-
+| `pwd`        | "Print Working Directory" (Geçerli dizini yazdır)                              | Bulunduğun dizini gösterir.                                                 | `pwd`         |
+| `cd`         | "Change Directory" (Dizini değiştir)                                          | Farklı bir dizine geçiş yapar.                                             | `cd /home/user` |
+| `pushd`      | "Push Directory" (Dizini stack'e ekle)                                        | Mevcut dizini stack'e ekleyerek yeni dizine geçer.                         | `pushd /etc`  |
+| `popd`       | "Pop Directory" (Stack'ten dizini çıkar)                                      | Önceki dizine geri döner.                                                  | `popd`        |
+| `/`          | "Root Directory" (Kök Dizin)                                                 | Tüm dosya sisteminin kök dizini.                                           | `cd /`        |
+| `../`        | "Üst Dizin"                                                                  | Bir üst dizine çıkmayı sağlar.                                            | `cd ../`      |
+| `history`    | "Geçmiş" anlamına gelir                                                       | Önceden çalıştırılan komutları listeler.                                   | `history`     |
+| `reverse search` | "Tersine arama" (Ctrl + r ile çalışır)                               | Önceki komutlar arasında arama yapar.                                      | `Ctrl + r`    |
 ---
 
 # 2. **Sistem Yönetimi ve Yardım Komutları**
@@ -44,6 +51,19 @@
 | `bzgrep`   | "Bzip2 grep" (Burrows-Wheeler sıkıştırmasında arama yapar)      | `.bz2` dosyasında arama yapar.                                 | `bzgrep <arama_kelimesi> <dosya_adı.bz2>`   |
 | `unrar`    | "UnRAR" (RAR arşivini açmak) kelimesinin birleşimi              | `.rar` arşiv dosyasını açar.                                   | `unrar x <dosya_adı.rar>`                   |
 | `unzip`    | "Unzip" (zip dosyasını açmak) kelimesinin birleşimi             | `.zip` arşiv dosyasını açar.                                   | `unzip <dosya_adı.zip>`                     |
+| `cat`   | "Concatenate" (Birleştir) kelimesinin kısaltması       | Dosya içeriğini görüntüler veya birleştirir.               | `cat dosya.txt`              |
+| `tac`   | "Reverse Cat" (Tersine cat)                            | Dosya içeriğini tersine çevirerek gösterir.                | `tac dosya.txt`              |
+| `rev`   | "Reverse" (Ters çevir)                                 | Her satırı ters çevirerek gösterir.                        | `echo "Merhaba" | rev`      |
+| `touch` | "Dokun" anlamına gelir                                 | Boş bir dosya oluşturur veya var olanın tarihini günceller. | `touch yeni_dosya.txt`       |
+| `head`  | "Başlık" anlamına gelir                                | Dosyanın ilk satırlarını gösterir.                         | `head -n 10 dosya.txt`       |
+| `tail`  | "Kuyruk" anlamına gelir                                | Dosyanın son satırlarını gösterir.                         | `tail -n 10 dosya.txt`       |
+| `tee`   | "T" harfinden gelir, yönlendirme işlemi yapar          | Komut çıktısını hem ekrana hem de bir dosyaya kaydeder.    | `echo "merhaba" | tee dosya.txt` |
+| `sort`  | "Sırala" anlamına gelir                                | Satırları alfabetik veya sayısal olarak sıralar.           | `sort dosya.txt`             |
+| `wc`    | "Word Count" (Kelime Sayımı)                           | Bir dosyanın satır, kelime ve karakter sayısını gösterir.  | `wc dosya.txt`               |
+| `nl`    | "Numaralandır" anlamına gelir                          | Satırları numaralandırarak gösterir.                       | `nl dosya.txt`               |
+| `paste` | "Yapıştır" anlamına gelir                              | Dosyaları yan yana birleştirir.                            | `paste dosya1.txt dosya2.txt` |
+| `cut`   | "Kes" anlamına gelir                                   | Metinden belirli bölümleri keser ve gösterir.              | `cut -d ":" -f 1 /etc/passwd` |
+| `tr`    | "Translate" (Dönüştür) anlamına gelir                  | Karakter dönüşümleri yapar.                                | `echo "merhaba" | tr a-z A-Z` |
 
 ---
 
@@ -66,7 +86,8 @@
 | `chage`    | "Change age" (yaş değiştir) kelimelerinin birleşimi             | Kullanıcı şifre değiştirme süresi üzerinde değişiklik yapar.   | `chage -M 90 <kullanıcı_adı>`               |
 | `usermod`  | "User modify" (kullanıcıyı değiştirmek) kelimelerinin birleşimi | Kullanıcı hesabını değiştirir.                                  | `usermod -aG <grup_adı> <kullanıcı_adı>`    |
 | `passwd`   | "Password" (şifre) kelimesinin birleşimi                        | Kullanıcı şifresini değiştirir.                                 | `passwd <kullanıcı_adı>`                    |
-
+| `umask`  | "User Mask" (Kullanıcı Maskeleme)           | Varsayılan dosya izinlerini belirler. | `umask 022`  |
+| `passwd` | "Password" (Şifre) kelimesinden türetilmiştir. | Kullanıcı şifresini değiştirir.      | `passwd`     |
 ---
 
 # 5. **Sistem Durumu ve İşlem Yönetimi**
