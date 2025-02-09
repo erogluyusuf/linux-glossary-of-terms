@@ -159,3 +159,190 @@
 | `umount`   | "Unmount" (Çıkarmak) kelimesi, bağlanmış dosya sistemini çıkartır | Bağlı dosya sistemini çıkartır.                               | `umount /mnt`                               |
 | `df`       | "Disk Free" (Disk Boş) kelimelerinin birleşimi                | Disk kullanımını ve boş alanı gösterir.                        | `df -h`                                     |
 | `du`       | "Disk Usage" (Disk Kullanımı) kelimelerinin birleşimi         | Dosya ve dizinlerin disk kullanımını gösterir.                 | `du -sh <dizin_adı>`                        |
+
+
+
+
+## System Commands
+
+### 1. **fg**
+- **Description**: Arka planda çalışan bir işlemi ön planda getirir.
+- **Example**: `fg %1`
+
+### 2. **bg**
+- **Description**: Ön planda duran bir işlemi arka planda çalıştırır.
+- **Example**: `bg %1`
+
+### 3. **jobs**
+- **Description**: Çalışan işleri listeler.
+- **Example**: `jobs`
+
+### 4. **cfdisk**
+- **Description**: Disk bölümleri için grafiksel bir araçtır.
+- **Example**: `cfdisk`
+
+### 5. **badblocks**
+- **Description**: Sabit disk üzerinde kötü sektörleri kontrol eder.
+- **Example**: `badblocks -v /dev/sda`
+
+### 6. **runlevels**
+- **Description**: Sistem çalıştırma seviyelerini kontrol eder.
+- **Example**: `runlevel`
+
+### 7. **sysv-rc-conf**
+- **Description**: Servisleri ve çalıştırma seviyelerini yönetir.
+- **Example**: `sysv-rc-conf`
+
+### 8. **service**
+- **Description**: Servisleri başlatır, durdurur veya yeniden başlatır.
+- **Example**: `service apache2 restart`
+
+### 9. **reboot/halt**
+- **Description**: Sistemi yeniden başlatır veya kapatır.
+- **Example**: `reboot`
+
+### 10. **shutdown**
+- **Description**: Sistemi kapatır.
+- **Example**: `shutdown -h now`
+
+## File Operations
+
+### 1. **inode**
+- **Description**: Dosya sistemindeki dosya ve dizinlerin verilerini tutar.
+- **Example**: `ls -i`
+
+### 2. **ln**
+- **Description**: Dosya bağlantıları oluşturur.
+- **Example**: `ln -s /path/to/file link_name`
+
+### 3. **Katı Link - Sembolik Link**
+- **Description**: Katı link dosya sisteminde gerçek bir bağlantıdır, sembolik link ise bir dosyanın yolunu gösterir.
+- **Example**: `ln /path/to/original /path/to/link`
+
+## Package Management
+
+### 1. **dpkg**
+- **Description**: Debian paket yönetim aracıdır.
+- **Example**: `dpkg -l`
+
+### 2. **apt-get**
+- **Description**: Paketleri yönetmek için kullanılan bir araçtır.
+- **Example**: `apt-get install package_name`
+
+### 3. **aptitude**
+- **Description**: APT tabanlı paket yönetim aracıdır.
+- **Example**: `aptitude install package_name`
+
+### 4. **yum**
+- **Description**: RPM tabanlı dağıtımlar için paket yönetim aracıdır.
+- **Example**: `yum install package_name`
+
+### 5. **make**
+- **Description**: Yazılım derleme aracıdır.
+- **Example**: `make`
+
+### 6. **tasksel**
+- **Description**: Debian tabanlı sistemlerde yazılım görevlerini yönetir.
+- **Example**: `tasksel install web-server`
+
+## Networking & System Monitoring
+
+### 1. **iwconfig**
+- **Description**: Kablosuz ağ ayarlarını yapılandırır.
+- **Example**: `iwconfig wlan0`
+
+### 2. **ethtool**
+- **Description**: Ethernet aygıtlarını yönetir.
+- **Example**: `ethtool eth0`
+
+### 3. **route**
+- **Description**: IP yönlendirme tablosunu gösterir ve değiştirir.
+- **Example**: `route -n`
+
+### 4. **whois**
+- **Description**: İnternet domain sorgulama aracıdır.
+- **Example**: `whois example.com`
+
+### 5. **host**
+- **Description**: DNS sorguları yapar.
+- **Example**: `host example.com`
+
+### 6. **arp**
+- **Description**: ARP tablosunu yönetir.
+- **Example**: `arp -a`
+
+### 7. **tcpdump**
+- **Description**: Ağ trafiğini analiz eder.
+- **Example**: `tcpdump -i eth0`
+
+### 8. **dns**
+- **Description**: DNS çözümleme işlemleri yapar.
+- **Example**: `nslookup example.com`
+
+### 9. **authorized_keys**
+- **Description**: SSH için güvenli anahtarları depolar.
+- **Example**: `cat ~/.ssh/authorized_keys`
+
+### 10. **putty**
+- **Description**: SSH bağlantı aracı.
+- **Example**: `putty user@hostname`
+
+### 11. **sftp**
+- **Description**: Güvenli dosya aktarımı için protokoldür.
+- **Example**: `sftp user@host`
+
+## File Management
+
+### 1. **lls**
+- **Description**: SFTP'de dosya listesi gösterir.
+- **Example**: `lls`
+
+### 2. **put**
+- **Description**: SFTP ile dosya gönderir.
+- **Example**: `put localfile remotefile`
+
+### 3. **get**
+- **Description**: SFTP ile dosya alır.
+- **Example**: `get remotefile localfile`
+
+### 4. **lcd**
+- **Description**: SFTP ile yerel dizin değiştirir.
+- **Example**: `lcd /path/to/local/dir`
+
+### 5. **rename**
+- **Description**: Dosya adını değiştirir.
+- **Example**: `rename 's/.txt/.bak/' *.txt`
+
+### 6. **lsmkdir**
+- **Description**: Birlikte kullanılan, önce `ls`, sonra `mkdir` komutlarını ifade eder.
+- **Example**: `ls && mkdir new_directory`
+
+## Scheduling & Log Management
+
+### 1. **cron/crontab**
+- **Description**: Zamanlanmış görevler için kullanılır.
+- **Example**: `crontab -e`
+
+### 2. **log**
+- **Description**: Sistemdeki log dosyalarını inceleme.
+- **Example**: `cat /var/log/syslog`
+
+### 3. **last**
+- **Description**: Sisteme giriş yapan kullanıcıların geçmişini gösterir.
+- **Example**: `last`
+
+### 4. **btmp**
+- **Description**: Başarısız oturum girişleri hakkında log tutar.
+- **Example**: `cat /var/log/btmp`
+
+### 5. **lastlog**
+- **Description**: Son kullanıcı giriş bilgilerini gösterir.
+- **Example**: `lastlog`
+
+### 6. **utmp/wtmp**
+- **Description**: Kullanıcı oturum bilgilerini depolar.
+- **Example**: `wtmp`
+
+### 7. **lsof**
+- **Description**: Sistem dosyalarını ve hangi işlemler tarafından kullanıldığını gösterir.
+- **Example**: `lsof`
