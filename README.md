@@ -416,3 +416,32 @@
 ## `var/` (Variable)
 - **"Değişken Veriler"** → Sürekli değişen sistem verileri bulunur: **log dosyaları (`/var/log`), e-posta (`/var/mail`), geçici veriler (`/var/tmp`)**.
 - **Adı nereden geliyor?** "Variable" yani **değişken** anlamına gelir, çünkü içindeki veriler sürekli değişir.
+
+
+
+
+- `/` (Root)
+  - `bin/`
+  - `boot/` 
+  - `dev/` 
+  - `etc/` 
+  - `home/` 
+    - `kullanıcı1/`
+    - `kullanıcı2/`
+  - `lib/`
+  - `mnt/`
+  - `opt/`
+  - `proc/` 
+  - `root/` 
+  - `sbin/`
+  - `srv/`
+  - `usr/`
+    - `bin/`
+    - `lib/` 
+    - `local/` 
+    - `share/`
+  - `var/` 
+    - `log/`
+    - `mail/`
+    - `spool/`
+    - `tmp/` 
