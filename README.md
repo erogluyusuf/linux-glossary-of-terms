@@ -352,44 +352,67 @@
 
 
 
-# Linux Dizin Yapısı
+# Linux Dizin Yapısı ve Açıklamaları
 
-# Linux Dizin Yapısı
+## `/` (Root)
+- **"Kök Dizini"** → Linux'taki **tüm dosya ve dizinlerin başlangıç noktasıdır**.
 
-- `/` (Root)
-  - `bin/` - Temel kullanıcı komutları (ls, cp, mv, rm vb.)
-  - `boot/` - Önyükleme dosyaları (GRUB, kernel vb.)
-  - `dev/` - Donanım aygıt dosyaları (diskler, USB, klavye vb.)
-  - `etc/` - Konfigürasyon dosyaları
-  - `home/` - Kullanıcı dizinleri
-    - `kullanıcı1/`
-    - `kullanıcı2/`
-  - `lib/` - Sistem kütüphaneleri
-  - `mnt/` - Geçici olarak bağlanan diskler için
-  - `opt/` - Opsiyonel yazılımlar (üçüncü taraf uygulamalar)
-  - `proc/` - Çekirdek ve süreç bilgileri (sanal dosya sistemi)
-  - `root/` - Root kullanıcısının ana dizini
-  - `sbin/` - Sistem yönetimi komutları (shutdown, fdisk vb.)
-  - `srv/` - Sunucuya özel veriler
-  - `tmp/` - Geçici dosyalar (sistem yeniden başlayınca silinir)
-  - `usr/` - Kullanıcı programları ve kütüphaneleri
-    - `bin/` - Kullanıcı uygulamaları
-    - `lib/` - Kullanıcı kütüphaneleri
-    - `local/` - Yerel olarak yüklenen yazılımlar
-    - `share/` - Ortak kullanılan veriler
-  - `var/` - Log dosyaları, e-posta, geçici veriler
-    - `log/` - Sistem günlükleri (loglar)
-    - `mail/` - E-posta dosyaları
-    - `spool/` - Yazdırma kuyruğu vb.
-    - `tmp/` - Geçici dosyalar
+## `bin/` (Binary)
+- **"İkili (Binary) Programlar"** → Temel kullanıcı komutlarını içerir (`ls`, `cp`, `mv`, `rm` gibi).
+- **Adı nereden geliyor?** "Binary" yani **makine tarafından çalıştırılabilir ikili dosyalar** içerdiği için.
 
+## `boot/` (Bootloader)
+- **"Önyükleme (Boot) Dosyaları"** → Çekirdek (kernel) ve boot yükleyici (GRUB, LILO vb.) dosyalarını içerir.
+- **Adı nereden geliyor?** "Bootstrapping" teriminden türemiştir, bilgisayarın açılış sürecini ifade eder.
 
+## `dev/` (Device)
+- **"Aygıt (Device) Dosyaları"** → Diskler, USB, klavye gibi donanımları temsil eden sanal dosyalar içerir.
+- **Adı nereden geliyor?** "Device" yani **aygıt** kelimesinden gelir.
 
+## `etc/` (Et Cetera)
+- **"Yapılandırma Dosyaları"** → Sistem ve uygulamaların konfigürasyon dosyalarını içerir (`/etc/passwd`, `/etc/hosts` gibi).
+- **Adı nereden geliyor?** "Etcetera" kelimesinden türemiştir, ancak zamanla **"Editable Text Configuration"** anlamında kullanılmıştır.
 
+## `home/` (Home)
+- **"Kullanıcı Dizinleri"** → Her kullanıcı için kişisel dosyaları barındırır.
+- **Adı nereden geliyor?** Kullanıcıların **kişisel çalışma alanı** olduğu için "Home" yani **ev dizini** olarak adlandırılmıştır.
 
+## `lib/` (Library)
+- **"Kütüphane Dosyaları"** → Programların çalışması için gerekli paylaşılan kütüphaneleri (`.so` dosyaları) içerir.
+- **Adı nereden geliyor?** "Library" yani **kütüphane** kelimesinden gelir.
 
+## `mnt/` (Mount)
+- **"Bağlama Noktası"** → Harici diskler ve ağ sürücüleri gibi **geçici olarak bağlanan dosya sistemleri** buraya monte edilir.
+- **Adı nereden geliyor?** "Mount" yani **bağlamak** kelimesinden türemiştir.
 
+## `opt/` (Optional)
+- **"Opsiyonel Yazılımlar"** → Üçüncü taraf uygulamaların yüklenmesi için ayrılmış dizindir.
+- **Adı nereden geliyor?** "Optional" yani **isteğe bağlı** yazılımlar için.
 
+## `proc/` (Process)
+- **"Süreç (Process) Bilgileri"** → Çalışan işlemler ve sistem bilgileri burada sanal dosya olarak bulunur.
+- **Adı nereden geliyor?** "Process" yani **süreç** kelimesinden gelir.
 
+## `root/` (Root User Home)
+- **"Root Kullanıcısının Ana Dizini"** → Süper kullanıcı (root) için özel dizindir.
+- **Adı nereden geliyor?** Root kullanıcısına ait olduğu için doğrudan **"root"** ismi verilmiştir.
 
+## `sbin/` (System Binary)
+- **"Sistem Yöneticisi Komutları"** → Yalnızca **root kullanıcısının çalıştırabileceği** komutları içerir (`fdisk`, `shutdown`, `iptables` vb.).
+- **Adı nereden geliyor?** "System Binary" yani **sistem yönetimi için ikili dosyalar** içerdiği için.
 
+## `srv/` (Service)
+- **"Sunucu Servis Dosyaları"** → Web sunucuları ve diğer servislerin kullandığı **veri dosyalarını** içerir.
+- **Adı nereden geliyor?** "Service" yani **hizmet/sunucu servisi** anlamına gelir.
+
+## `tmp/` (Temporary)
+- **"Geçici Dosyalar"** → Geçici dosyalar burada tutulur ve sistem yeniden başladığında **silinir**.
+- **Adı nereden geliyor?** "Temporary" yani **geçici** anlamına gelir.
+
+## `usr/` (Unix System Resources)
+- **"Kullanıcı Programları ve Dosyaları"** → Kullanıcıların yüklediği programlar, kütüphaneler ve kaynaklar burada bulunur.
+- **Adı nereden geliyor?** Başlangıçta **"User" (Kullanıcı)** anlamına gelse de, daha sonra **"Unix System Resources"** anlamında kullanılmaya başlandı.
+
+## `var/` (Variable)
+- **"Değişken Veriler"** → Sürekli değişen sistem verileri bulunur: **log dosyaları (`/var/log`), e-posta (`/var/mail`), geçici veriler (`/var/tmp`)**.
+- **Adı nereden geliyor?** "Variable" yani **değişken** anlamına gelir, çünkü içindeki veriler sürekli değişir.
