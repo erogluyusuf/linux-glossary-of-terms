@@ -346,3 +346,50 @@
 ### 7. **lsof**
 - **Description**: Sistem dosyalarını ve hangi işlemler tarafından kullanıldığını gösterir.
 - **Example**: `lsof`
+- 
+
+
+
+
+
+# Linux Dizin Yapısı
+
+# Linux Dizin Yapısı
+
+- `/` (Root)
+  - `bin/` - Temel kullanıcı komutları (ls, cp, mv, rm vb.)
+  - `boot/` - Önyükleme dosyaları (GRUB, kernel vb.)
+  - `dev/` - Donanım aygıt dosyaları (diskler, USB, klavye vb.)
+  - `etc/` - Konfigürasyon dosyaları
+  - `home/` - Kullanıcı dizinleri
+    - `kullanıcı1/`
+    - `kullanıcı2/`
+  - `lib/` - Sistem kütüphaneleri
+  - `mnt/` - Geçici olarak bağlanan diskler için
+  - `opt/` - Opsiyonel yazılımlar (üçüncü taraf uygulamalar)
+  - `proc/` - Çekirdek ve süreç bilgileri (sanal dosya sistemi)
+  - `root/` - Root kullanıcısının ana dizini
+  - `sbin/` - Sistem yönetimi komutları (shutdown, fdisk vb.)
+  - `srv/` - Sunucuya özel veriler
+  - `tmp/` - Geçici dosyalar (sistem yeniden başlayınca silinir)
+  - `usr/` - Kullanıcı programları ve kütüphaneleri
+    - `bin/` - Kullanıcı uygulamaları
+    - `lib/` - Kullanıcı kütüphaneleri
+    - `local/` - Yerel olarak yüklenen yazılımlar
+    - `share/` - Ortak kullanılan veriler
+  - `var/` - Log dosyaları, e-posta, geçici veriler
+    - `log/` - Sistem günlükleri (loglar)
+    - `mail/` - E-posta dosyaları
+    - `spool/` - Yazdırma kuyruğu vb.
+    - `tmp/` - Geçici dosyalar
+
+
+
+
+
+
+
+
+
+
+
